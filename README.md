@@ -1,16 +1,53 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite single-page application for authentication and todo management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Authentication flow with protected dashboard routes
+- Dashboard home with user welcome message
+- Todo list, add, edit, and dashboard navigation
+- SPA-friendly deployment setup for Vercel
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Router
+- Ant Design
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the app in development mode:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This project is configured for Vercel as a single-page application. The root [vercel.json](vercel.json) file rewrites all routes to [index.html](index.html), so refreshing on routes like `/dashboard` or `/dashboard/todos` will not show a 404.
+
+## Notes
+
+- The app uses local storage for user and todo data in the current implementation.
+- The default Vite starter text has been replaced with project-specific documentation.
